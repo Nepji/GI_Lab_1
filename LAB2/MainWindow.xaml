@@ -5,41 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LAB2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="419" Width="800">
 
-    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="410">
-        <WrapPanel.Resources>
-            <Style TargetType="TextBlock">
-                <Setter Property="Margin" Value="2"/>
-            </Style>
-            <Style TargetType="TextBox">
-                <Setter Property="Margin" Value="0"/>
-            </Style>
-            <Style TargetType="Button">
-                <Setter Property="Margin" Value= "100,5,0,0"/>
-            </Style>
-        </WrapPanel.Resources>
-
-        <Label Content="Label"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <Label Content="Label"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <TextBox Text="TextBox"/>
-        <Button Content="Button"/>
-
-
-    </WrapPanel>
+    <DockPanel>
+        <Label Content="Label" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
+        <TextBox Text="TextBox"  DockPanel.Dock="Left" Width="300"/>
+        <TextBox Text="TextBox" DockPanel.Dock="Right" Width="300"/>
+        <Button Content="Button" DockPanel.Dock="Bottom" Width="75" Height="21" Margin="0,250,0,0"/>
+    </DockPanel>
 </Window>
