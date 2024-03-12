@@ -5,11 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LAB2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="419" Width="800">
+        Title="TextEditor" Height="419" Width="800">
 
-    <Canvas Background="Aqua">
-        <Label Content="Label" Canvas.Top="50" Canvas.Left="50"/>
-        <TextBox Text="TextBox" Canvas.Top="70" Canvas.Left="80"/>
-        <Button Content="Button" Canvas.Top="90" Canvas.Left="110"/>
-    </Canvas>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Height="100">
+            <Button x:Name="Open">
+                <Image Source="source\images\OpenImage.png" ToolTip="Open" Height="100"/>
+            </Button>
+            <Button x:Name="Erase">
+                <Image Source="source\images\EraseImage.jpg" ToolTip="Erase"/>
+            </Button>
+            <Button x:Name="Copy">
+                <Image Source="source\images\CopyImage.png" ToolTip="Copy"/>
+            </Button>
+
+            <Button x:Name="Paste">
+                <Image Source="source\images\PasteImage.png" ToolTip="Paste"/>
+            </Button>
+        </StackPanel>
+
+
+        <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+
+
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+
+                <ScrollViewer Grid.Row="0" Margin="20">
+                    <TextBox Text="" TextWrapping="Wrap" AcceptsReturn="True" />
+                </ScrollViewer>
+
+                <DockPanel Grid.Row="1" Margin="20">
+                    <Button Content="OK" DockPanel.Dock="Bottom" Width="50"/>
+                </DockPanel>
+            </Grid>
+        </Border>
+
+    </Grid>
 </Window>

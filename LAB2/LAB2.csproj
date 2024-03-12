@@ -94,5 +94,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\images\EraseImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\images\CopyImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\images\PasteImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="source\images\OpenImage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
