@@ -28,17 +28,17 @@
 
         <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10" Background="{StaticResource LinearPanelBrush}"/>
         <StackPanel Grid.Row="0" Orientation="Horizontal" Height="100">
-            <Button x:Name="Open">
+            <Button x:Name="Open" Command="Open">
                 <Image Source="source\images\OpenImage.png" ToolTip="Open" Height="100"/>
             </Button>
-            <Button x:Name="Erase">
+            <Button x:Name="Erase" Command="Undo">
                 <Image Source="source\images\EraseImage.jpg" ToolTip="Erase"/>
             </Button>
-            <Button x:Name="Copy">
+            <Button x:Name="Copy" Command="Copy">
                 <Image Source="source\images\CopyImage.png" ToolTip="Copy"/>
             </Button>
 
-            <Button x:Name="Paste">
+            <Button x:Name="Paste" Command="Paste">
                 <Image Source="source\images\PasteImage.png" ToolTip="Paste"/>
             </Button>
         </StackPanel>
@@ -52,11 +52,14 @@
                 </Grid.RowDefinitions>
 
                 <ScrollViewer Grid.Row="0" Margin="20">
-                    <TextBox Text="" TextWrapping="Wrap" AcceptsReturn="True" />
+                    <TextBox x:Name="inputTextBox" Text="" TextWrapping="Wrap" AcceptsReturn="True" FontSize="{Binding ElementName=fontSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" />
                 </ScrollViewer>
 
                 <DockPanel Grid.Row="1" Margin="20">
-                    <Button Content="OK" DockPanel.Dock="Bottom" Width="50"/>
+                    <Label  Content="Розмір Шрифту:" DockPanel.Dock="Left"/>
+                    <Slider DockPanel.Dock="Left" Margin="4" MinWidth="100" Name="fontSlider" Maximum="100" Minimum="12"/>
+                    <Button Content="OK" DockPanel.Dock="Bottom" Width="50" Command="Save"/>
+                    
                 </DockPanel>
             </Grid>
         </Border>
