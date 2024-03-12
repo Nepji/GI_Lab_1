@@ -6,17 +6,40 @@
         xmlns:local="clr-namespace:LAB2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
-    <StackPanel VerticalAlignment="Center" Margin="50">
-        <Label Content="Label" HorizontalAlignment="Center"/>
-        <Rectangle Height="1" Fill="Black" Opacity="0.4"/>
+
+    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="410">
+        <WrapPanel.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Margin" Value="2"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="0"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value= "100,5,0,0"/>
+            </Style>
+        </WrapPanel.Resources>
+
+        <Label Content="Label"/>
         <TextBox Text="TextBox"/>
-        <Rectangle Height="1" Fill="Black" Opacity="0.4"/>
         <TextBox Text="TextBox"/>
-        <Rectangle Height="1" Fill="Black" Opacity="0.4"/>
         <TextBox Text="TextBox"/>
-        <Rectangle Height="1" Fill="Black" Opacity="0.4"/>
         <TextBox Text="TextBox"/>
-        <Button Content="Button" Margin="0,50,0,0" VerticalAlignment="Center" Width="200"/>
-    </StackPanel>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <Label Content="Label"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <TextBox Text="TextBox"/>
+        <Button Content="Button"/>
+
+
+    </WrapPanel>
 </Window>
