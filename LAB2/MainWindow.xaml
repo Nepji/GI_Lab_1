@@ -7,10 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="419" Width="800">
 
-    <DockPanel>
-        <Label Content="Label" HorizontalAlignment="Center" DockPanel.Dock="Top"/>
-        <TextBox Text="TextBox"  DockPanel.Dock="Left" Width="300"/>
-        <TextBox Text="TextBox" DockPanel.Dock="Right" Width="300"/>
-        <Button Content="Button" DockPanel.Dock="Bottom" Width="75" Height="21" Margin="0,250,0,0"/>
-    </DockPanel>
+    <Canvas Background="Aqua">
+        <Label Content="Label" Canvas.Top="50" Canvas.Left="50"/>
+        <TextBox Text="TextBox" Canvas.Top="70" Canvas.Left="80"/>
+        <Button Content="Button" Canvas.Top="90" Canvas.Left="110"/>
+    </Canvas>
 </Window>
