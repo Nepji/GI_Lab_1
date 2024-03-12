@@ -7,13 +7,26 @@
         mc:Ignorable="d"
         Title="TextEditor" Height="419" Width="800">
 
+    <Window.Resources>
+        <LinearGradientBrush x:Key="LinearPanelBrush" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="Blue" Offset="0"/>
+            <GradientStop Color="Yellow" Offset="1"/>
+        </LinearGradientBrush>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10"/>
+        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10" Background="{StaticResource LinearPanelBrush}"/>
         <StackPanel Grid.Row="0" Orientation="Horizontal" Height="100">
             <Button x:Name="Open">
                 <Image Source="source\images\OpenImage.png" ToolTip="Open" Height="100"/>
@@ -31,14 +44,11 @@
         </StackPanel>
 
 
-        <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
+        <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10" Background="{StaticResource LinearPanelBrush}">
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
-
-
                     <RowDefinition Height="auto"/>
-
                 </Grid.RowDefinitions>
 
                 <ScrollViewer Grid.Row="0" Margin="20">
