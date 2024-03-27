@@ -6,13 +6,8 @@
         xmlns:local="clr-namespace:Lab3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="367">
-    
+
     <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="FontSize" Value="30" />
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-        </Style>
         <LinearGradientBrush x:Key="LinearPanelBrush" StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="Blue" Offset="0"/>
             <GradientStop Color="Yellow" Offset="1"/>
@@ -27,12 +22,10 @@
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
-        <Style TargetType="Button" x:Key="BorderButtonStyle">
+        <Style TargetType="Button" BasedOn="{StaticResource DefaultBinderStyle}"/>
+        <Style TargetType="Button" x:Key="BorderButtonStyle" BasedOn="{StaticResource DefaultBinderStyle}">
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="BorderBrush" Value="Black"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="30" />
-            <Setter Property="Foreground" Value="Black"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
     </Window.Resources>
